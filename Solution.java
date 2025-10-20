@@ -3,9 +3,8 @@ package LeetCode;
 public class Solution {
 
 	public static void main(String[] args) {
-		String input = "cbbd";
+		int[] input =  {1,2,1};
 	}
-
 	
 
 }
