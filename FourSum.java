@@ -1,18 +1,13 @@
 package LeetCode;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-public class Solution {
-
-	public static void main(String[] args) {
-		int[] input = { 1000000000, 1000000000, 1000000000, 1000000000 };
-		display(fourSum(input, -294967296));
-	}
+public class FourSum {
 
 	public static List<List<Integer>> fourSum(int[] nums, int target) {
 		List<List<Integer>> result = new ArrayList<>();
