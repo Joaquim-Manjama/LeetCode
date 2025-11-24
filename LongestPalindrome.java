@@ -24,7 +24,7 @@ public class LongestPalindrome {
 		return longestPalindrome;
 	}
 
-	public static boolean isPalindrome(String string) {
+	private static boolean isPalindrome(String string) {
 		StringBuilder temp = new StringBuilder(string);
 		temp.reverse();
 		String reverseString = temp.toString();

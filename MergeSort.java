@@ -28,7 +28,7 @@ public class MergeSort {
 		return array;
 	}
 
-	public static int[] merge(int[] original, int[] left, int[] right) {
+	private static int[] merge(int[] original, int[] left, int[] right) {
 		int i = 0, j = 0, k = 0;
 
 		while (i < left.length && j < right.length) {

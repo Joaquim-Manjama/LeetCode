@@ -53,12 +53,12 @@ public class FourSum {
 		return result;
 	}
 
-	public static boolean isDistinct(int a, int b, int c, int d) {
+	private static boolean isDistinct(int a, int b, int c, int d) {
 		return (a != b && a != c && a != d 
 		&& b != c && b != d && c != d);
 	}
 
-	public static void display(List<List<Integer>> arr) {
+	private static void display(List<List<Integer>> arr) {
 		StringBuilder output = new StringBuilder();
 
 		output.append("[ ");

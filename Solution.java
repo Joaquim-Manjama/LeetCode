@@ -3,58 +3,6 @@ package LeetCode;
 public class Solution {
 
 	public static void main(String[] args) {
-		int[] nums1 = {1}; //{1, 2}
-		int[] nums2 = {};// {3, 4}  //1, 2, 3
-		//2, 2, 2, 2, 2
-
-		int[] nums = {};
-		
-		System.out.println(findMedianSortedArrays(nums1, nums2));
+		int n = 3;
 	}
-
-	public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-		int totalNumberOfDigits = nums1.length + nums2.length;
-		int[] nums = new int[((totalNumberOfDigits) /2) + 1];
-		int index = 0;
-		int index1 = 0;
-		int index2 = 0;
-		
-		while(index < nums.length) {
-			
-			if (index1 < nums1.length && index2 < nums2.length) {
-				
-				if (nums1[index1] < nums2[index2]) {
-					nums[index] = nums1[index1];
-					index1++;
-					
-				} else {
-					nums[index] = nums2[index2];
-					index2++;
-				}
-
-			} else {
-				
-				if (index1 < nums1.length) {
-					nums[index] = nums1[index1];
-					index1++;
-					
-				} else {
-					nums[index] = nums2[index2];
-					index2++;
-				}
-			}
-			
-			index++;
-			
-		}
-		
-		if (totalNumberOfDigits % 2 == 0) {
-			
-			return (nums[nums.length - 2] + nums[nums.length - 1]) / 2d;
-			
-		} else {
-			
-			return (double) nums[nums.length - 1];
-		}
-    }
 }

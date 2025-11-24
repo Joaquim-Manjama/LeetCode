@@ -33,7 +33,7 @@ public class LetterCombinations {
 
 	}
 
-	public static List<String> combine(List<String> arr1, String[] arr2) {
+	private static List<String> combine(List<String> arr1, String[] arr2) {
 		List<String> arr = new ArrayList<>();
 
 		for (int i = 0; i < arr1.size(); i++) {
