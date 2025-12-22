@@ -28,22 +28,4 @@ public class RemoveNthFromEnd {
 
 		return head;
 	}
-
-	private static void display(ListNode list) {
-		StringBuilder output = new StringBuilder("[ ");
-		ListNode temp = list;
-
-		while (temp != null) {
-			output.append(temp.val);
-
-			if (temp.next != null) {
-				output.append(", ");
-			}
-
-			temp = temp.next;
-		}
-
-		output.append(" ]");
-		System.out.println(output);
-	}
 }

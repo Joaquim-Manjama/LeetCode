@@ -1,61 +1,65 @@
+package LeetCode;
+
+import java.util.List;
+import java.util.ArrayList;
+
+import java.util.Map;
+import java.util.HashMap;
+
 class FindSubstring {
 
-	// Return an array of the starting indices of all the concatenated substrings in s	
+	// Return an array of the starting indices of all the concatenated substrings in
+	// s
 	public static List<Integer> findSubstring(String s, String[] words) {
-        List<Integer> output = new ArrayList<>();
+		List<Integer> output = new ArrayList<>();
 
-        if (s == null || words == null || words.length == 0) {
-            return output;
-        }
+		if (s == null || words == null || words.length == 0) {
+			return output;
+		}
 
-        int wordSize = words[0].length();
-        int wordCount = words.length;
-        int stringSize = wordSize * wordCount;
+		int wordSize = words[0].length();
+		int wordCount = words.length;
+		int stringSize = wordSize * wordCount;
 
 		Map<String, Integer> baseMap = new HashMap<>();
-        for (String word : words) {
-            baseMap.put(word, baseMap.getOrDefault(word, 0) + 1);
-        }
+		for (String word : words) {
+			baseMap.put(word, baseMap.getOrDefault(word, 0) + 1);
+		}
 
-        int start = 0;
+		int start = 0;
 
-        while (start <= s.length() - stringSize) {
+		while (start <= s.length() - stringSize) {
 
 			Map<String, Integer> map = new HashMap<>(baseMap);
 
-            if (isValid(s, start, wordSize, wordCount, map)) {
-                output.add(start);
-            }
+			if (isValid(s, start, wordSize, wordCount, map)) {
+				output.add(start);
+			}
 
-            start++;
-        }
+			start++;
+		}
 
-        return output;
-    }
+		return output;
+	}
 
-    private static boolean isValid(
-            String s,
-            int start,
-            int wordSize,
-            int wordCount,
-            Map<String, Integer> map) {
+	private static boolean isValid(String s, int start, int wordSize, int wordCount, Map<String, Integer> map) {
 
-        for (int i = 0; i < wordCount; i++) {
-            int idx = start + i * wordSize;
-            String word = s.substring(idx, idx + wordSize);
+		for (int i = 0; i < wordCount; i++) {
+			int idx = start + i * wordSize;
+			String word = s.substring(idx, idx + wordSize);
 
-            Integer count = map.get(word);
-            if (count == null) {
-                return false;
-            }
+			Integer count = map.get(word);
+			if (count == null) {
+				return false;
+			}
 
-            if (count == 1) {
-                map.remove(word);
-            } else {
-                map.put(word, count - 1);
-            }
-        }
+			if (count == 1) {
+				map.remove(word);
+			} else {
+				map.put(word, count - 1);
+			}
+		}
 
-        return true;
-    }
+		return true;
+	}
 }

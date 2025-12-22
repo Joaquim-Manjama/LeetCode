@@ -23,21 +23,4 @@ public class SwapNodesInPairs {
 
 		return dummy.next;
 	}
-
-	private static void display(ListNode list) {
-		StringBuilder output = new StringBuilder("[ ");
-		ListNode temp = list;
-
-		while (temp != null) {
-			output.append(temp.val);
-			temp = temp.next;
-
-			if (temp != null) {
-				output.append(" -> ");
-			}
-		}
-
-		output.append(" ]");
-		System.out.println(output);
-	}
 }

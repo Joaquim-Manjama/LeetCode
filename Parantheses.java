@@ -3,11 +3,13 @@ package LeetCode;
 import java.util.HashMap;
 import java.util.Stack;
 
+@SuppressWarnings("unused")
 public class Parantheses {
 
 	// Determine if the string contaning opening and closing brackets is valid (all
 	// open brackets have a closing bracket in a valid way)
 	public static boolean isValid(String s) {
+		@SuppressWarnings("serial")
 		HashMap<String, String> brackets = new HashMap<>() {
 			{
 				put("(", ")");

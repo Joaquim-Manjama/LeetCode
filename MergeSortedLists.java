@@ -48,22 +48,4 @@ public class MergeSortedLists {
 
 		return !empty ? output : output.next;
 	}
-
-	private static void display(ListNode list) {
-		ListNode temp = list;
-		StringBuilder output = new StringBuilder("[ ");
-
-		while (temp != null) {
-			output.append(temp.val);
-
-			if (temp.next != null) {
-				output.append(" -> ");
-			}
-
-			temp = temp.next;
-		}
-
-		output.append(" ]");
-		System.out.println(output);
-	}
 }

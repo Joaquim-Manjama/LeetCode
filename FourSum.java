@@ -57,33 +57,4 @@ public class FourSum {
 		return (a != b && a != c && a != d 
 		&& b != c && b != d && c != d);
 	}
-
-	private static void display(List<List<Integer>> arr) {
-		StringBuilder output = new StringBuilder();
-
-		output.append("[ ");
-
-		for (int i = 0; i < arr.size(); i++) {
-			output.append("[ ");
-
-			for (int j = 0; j < arr.get(i).size(); j++) {
-				output.append(arr.get(i).get(j));
-
-				if (j < 3) {
-					output.append(", ");
-				}
-			}
-
-			output.append(" ]");
-
-			if (i < arr.size() - 1) {
-				output.append(", ");
-			}
-
-		}
-
-		output.append(" ]");
-
-		System.out.println(output);
-	}
 }

@@ -6,10 +6,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@SuppressWarnings("unused")
 public class LetterCombinations {
 
 	// Return all possible letter combinations that the number could represent.
 	public static List<String> letterCombinations(String digits) {
+		@SuppressWarnings("serial")
 		Map<String, String[]> map = new HashMap<>() {
 			{
 				put("2", new String[] { "a", "b", "c" });

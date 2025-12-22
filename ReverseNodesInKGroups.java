@@ -36,24 +36,4 @@ public class ReverseNodesInKGroups {
 		}
 		return dummy.next;
 	}
-
-	private static void display(ListNode list) {
-		StringBuilder output = new StringBuilder("[ ");
-		ListNode head = list;
-
-		while (head != null) {
-
-			output.append(head.val);
-
-			if (head.next != null) {
-				output.append(" -> ");
-			}
-
-			head = head.next;
-		}
-
-		output.append(" ]");
-
-		System.out.println(output);
-	}
 }

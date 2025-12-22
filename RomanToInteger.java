@@ -6,6 +6,7 @@ public class RomanToInteger {
 
 	// Convert a roman numeral string into an integer
 	public static int romanToInt(String s) {
+		@SuppressWarnings("serial")
 		HashMap<Character, Integer> values = new HashMap<>() {
 			{
 				put('I', 1);
