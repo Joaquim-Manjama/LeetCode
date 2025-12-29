@@ -1,15 +1,15 @@
 package LeetCode;
 
 import java.util.List;
+import java.util.Stack;
 
 @SuppressWarnings("unused")
 public class Solution {
 
 	public static void main(String[] args) {
-		int[] nums = { 2, 2, 7, 5, 4, 3, 2, 2, 1 };
-
+		String s = "()()";
 	}
-	
+
 	// PRINT A STRING
 	private static void display(String message) {
 		System.out.println(message);
