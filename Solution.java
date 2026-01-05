@@ -1,13 +1,39 @@
 package LeetCode;
 
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
+import java.util.Queue;
 
 @SuppressWarnings("unused")
 public class Solution {
 
 	public static void main(String[] args) {
-		String s = "()()";
+		int[] nums = { 1 };
+		int target = 1;
+	}
+
+	// PRINT A TREE
+	private static void display(TreeNode node) {
+		Queue<TreeNode> queue = new LinkedList<>();
+		queue.add(node);
+		TreeNode currentNode;
+
+		while (!queue.isEmpty()) {
+			int levelSize = queue.size();
+
+			while (levelSize > 0) {
+				currentNode = queue.remove();
+
+				if (currentNode != null) {
+					System.out.print(currentNode.val);
+					queue.add(currentNode.left);
+					queue.add(currentNode.right);
+				}
+				levelSize--;
+			}
+
+			System.out.println("");
+		}
 	}
 
 	// PRINT A STRING
