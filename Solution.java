@@ -3,14 +3,16 @@ package LeetCode;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Map;
+import java.util.HashMap;
 
 @SuppressWarnings("unused")
 public class Solution {
 
 	public static void main(String[] args) {
-		int[] nums = { 1 };
-		int target = 1;
+		
 	}
+
 
 	// PRINT A TREE
 	private static void display(TreeNode node) {
