@@ -1,18 +1,51 @@
 package LeetCode;
 
 import java.util.LinkedList;
+
 import java.util.List;
 import java.util.Queue;
+import java.util.Set;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.PriorityQueue;
+import java.util.AbstractMap.SimpleEntry;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 @SuppressWarnings("unused")
 public class Solution {
 
 	public static void main(String[] args) {
+		int[] candidates = {10,1,2,7,6,1,5};
+		int target = 8;
 		
+		List<List<Integer>> output = combinationSum2(candidates, target);
+		
+		for (List<Integer> list: output) {
+			display(list);
+		}
 	}
 
+	// Given a collection of candidate numbers (candidates) and a target number
+	// (target), find all unique combinations in candidates where the candidate
+	// numbers sum to target.
+	public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
+		List<List<Integer>> outputList = new ArrayList<>();
+
+		return outputList;
+
+	}
+
+	// DISPLAY A ENTRY QUEUE
+	public static void display(Queue<Entry<Integer, List<Integer>>> queue) {
+		int i = 1;
+		for (Entry<Integer, List<Integer>> entry : queue) {
+
+			display(i + ": {" + entry.getKey() + ": " + entry.getValue() + " }");
+			i++;
+		}
+	}
 
 	// PRINT A TREE
 	private static void display(TreeNode node) {
@@ -39,12 +72,12 @@ public class Solution {
 	}
 
 	// PRINT A STRING
-	private static void display(String message) {
+	public static void display(String message) {
 		System.out.println(message);
 	}
 
 	// PRINT AN INT
-	private static void display(int number) {
+	public static void display(int number) {
 		System.out.println(number);
 	}
 
@@ -59,7 +92,7 @@ public class Solution {
 	}
 
 	// PRINT A LIST OF INTEGERS
-	private static void display(List<Integer> list) {
+	public static void display(List<Integer> list) {
 		StringBuilder output = new StringBuilder("[ ");
 
 		for (int i = 0; i < list.size(); i++) {
