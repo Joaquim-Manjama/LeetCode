@@ -8,32 +8,19 @@ import java.util.Set;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.PriorityQueue;
+import java.lang.reflect.Array;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 
 @SuppressWarnings("unused")
 public class Solution {
 
 	public static void main(String[] args) {
-		int[] candidates = {10,1,2,7,6,1,5};
-		int target = 8;
-		
-		List<List<Integer>> output = combinationSum2(candidates, target);
-		
-		for (List<Integer> list: output) {
-			display(list);
-		}
-	}
-
-	// Given a collection of candidate numbers (candidates) and a target number
-	// (target), find all unique combinations in candidates where the candidate
-	// numbers sum to target.
-	public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
-		List<List<Integer>> outputList = new ArrayList<>();
-
-		return outputList;
+		int[] candidates = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};//{ 10, 1, 2, 7, 6, 1, 5 };
+		int target = 27;
 
 	}
 
