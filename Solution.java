@@ -4,59 +4,52 @@ import java.util.LinkedList;
 
 import java.util.List;
 import java.util.Queue;
-import java.util.Set;
-import java.util.Map;
 import java.util.Map.Entry;
-import java.util.PriorityQueue;
-import java.lang.reflect.Array;
-import java.util.AbstractMap.SimpleEntry;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
+
 
 @SuppressWarnings("unused")
 public class Solution {
 
 	public static void main(String[] args) {
-		int[] candidates = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};//{ 10, 1, 2, 7, 6, 1, 5 };
-		int target = 27;
-
+		int[] test1 = {1,2,0}; // 3
+        int[] test2 = {3,4,-1,1}; // 2
+        int[] test3 = {7,8,9,11,12}; // 1
+        int[] test4 = {100000, 3, 4000, 2, 15, 1, 99999}; // 4
 	}
 
-	// DISPLAY A ENTRY QUEUE
-	public static void display(Queue<Entry<Integer, List<Integer>>> queue) {
-		int i = 1;
-		for (Entry<Integer, List<Integer>> entry : queue) {
+    // DISPLAY A ENTRY QUEUE
+    public static void display(Queue<Entry<Integer, List<Integer>>> queue) {
+        int i = 1;
+        for (Entry<Integer, List<Integer>> entry : queue) {
 
-			display(i + ": {" + entry.getKey() + ": " + entry.getValue() + " }");
-			i++;
-		}
-	}
+            display(i + ": {" + entry.getKey() + ": " + entry.getValue() + " }");
+            i++;
+        }
+    }
 
-	// PRINT A TREE
-	private static void display(TreeNode node) {
-		Queue<TreeNode> queue = new LinkedList<>();
-		queue.add(node);
-		TreeNode currentNode;
+    // PRINT A TREE
+    private static void display(TreeNode node) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(node);
+        TreeNode currentNode;
 
-		while (!queue.isEmpty()) {
-			int levelSize = queue.size();
+        while (!queue.isEmpty()) {
+            int levelSize = queue.size();
 
-			while (levelSize > 0) {
-				currentNode = queue.remove();
+            while (levelSize > 0) {
+                currentNode = queue.remove();
 
-				if (currentNode != null) {
-					System.out.print(currentNode.val);
-					queue.add(currentNode.left);
-					queue.add(currentNode.right);
-				}
-				levelSize--;
-			}
+                if (currentNode != null) {
+                    System.out.print(currentNode.val);
+                    queue.add(currentNode.left);
+                    queue.add(currentNode.right);
+                }
+                levelSize--;
+            }
 
-			System.out.println("");
-		}
-	}
+            System.out.println("");
+        }
+    }
 
 	// PRINT A STRING
 	public static void display(String message) {
