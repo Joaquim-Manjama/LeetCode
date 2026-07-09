@@ -11,10 +11,8 @@ import java.util.Map.Entry;
 public class Solution {
 
 	public static void main(String[] args) {
-		int[] test1 = {1,2,0}; // 3
-        int[] test2 = {3,4,-1,1}; // 2
-        int[] test3 = {7,8,9,11,12}; // 1
-        int[] test4 = {100000, 3, 4000, 2, 15, 1, 99999}; // 4
+		int[] test1 = {0,1,0,2,1,0,1,3,2,1,2,1}; // 6
+        int[] test2 = {4,2,0,3,2,5}; // 9
 	}
 
     // DISPLAY A ENTRY QUEUE
