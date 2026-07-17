@@ -1,9 +1,7 @@
 package LeetCode;
 
-import java.util.LinkedList;
+import java.util.*;
 
-import java.util.List;
-import java.util.Queue;
 import java.util.Map.Entry;
 
 
@@ -11,9 +9,63 @@ import java.util.Map.Entry;
 public class Solution {
 
 	public static void main(String[] args) {
-		int[] test1 = {0,1,0,2,1,0,1,3,2,1,2,1}; // 6
-        int[] test2 = {4,2,0,3,2,5}; // 9
-	}
+//        String num1 = "2";
+//        String num2 = "3";
+        // 6
+        String num1 = "123";
+        String num2 = "456";
+        // 56088
+
+        System.out.println(multiply(num1, num2));
+    }
+
+    public static String multiply(String num1, String num2) {
+        int powerOfTen1 = 0;
+        int answer = 0;
+
+        for (int i = num1.length() - 1; i >=0; i--){
+
+            int powerOfTen2 = 0;
+            int mult = 0;
+            for (int j = num2.length() - 1; j >=0; j--) {
+                mult += charToInt(num1.charAt(i)) * charToInt(num2.charAt(j)) * (int)Math.pow(10, powerOfTen2);
+                powerOfTen2++;
+            }
+
+            mult *= (int)Math.pow(10, powerOfTen1);
+            answer += mult;
+            powerOfTen1++;
+
+            System.out.println(mult);
+        }
+
+        StringBuilder ans = new StringBuilder();
+
+        while (answer > 0) {
+            int num = answer % 10;
+            answer /= 10;
+
+            ans.append(num);
+        }
+
+        return ans.reverse().toString();
+    }
+
+    private static int charToInt(char character) {
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('0', 0);
+        map.put('1', 1);
+        map.put('2', 2);
+        map.put('3', 3);
+        map.put('4', 4);
+        map.put('5', 5);
+        map.put('6', 6);
+        map.put('7', 7);
+        map.put('8', 8);
+        map.put('9', 9);
+
+        return map.get(character);
+    }
 
     // DISPLAY A ENTRY QUEUE
     public static void display(Queue<Entry<Integer, List<Integer>>> queue) {
